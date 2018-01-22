@@ -1,6 +1,6 @@
 'use strict';
 
-//***COUNT SHEEP***//
+//==== COUNT SHEEP  =====//
 
 //input == total sheep
 //output == current sheep - 1 (countDown)
@@ -16,7 +16,7 @@ const countSheep = sheep => {
 
 // console.log(countSheep(10));
 
-//=====  DOUBLE ARRAY  =====
+//=====  DOUBLE ARRAY  =====//
 
 //let arr = [1,2,3];
 
@@ -31,17 +31,28 @@ const arrDbl = arr => {
 
 // console.log(arrDbl([1, 2, 3, 10, 20]));
 
-
-//=====REVERSE STRING=====//
+//===== REVERSE STRING =====//
 
 const reverseStr = str => {
   //input -- string
-  if (str  === '') {
+  if (str === '') {
     return '';
   }
 
   return reverseStr(str.slice(1)) + str[0];
- 
 };
 
 reverseStr('firoz');
+
+//===== nth TRIANGULAR NUMBER =====//
+
+const triNum = n => {
+  //base case
+  if (n === 1) {
+    return 1;
+  }
+  //recursive case
+  return n + triNum(n - 1);
+};
+
+console.log(triNum(6));

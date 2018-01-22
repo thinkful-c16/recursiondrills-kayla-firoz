@@ -12,7 +12,22 @@ const countSheep = sheep => {
 
   console.log(`${sheep} - Another sheep jump over the fence`);
   return countSheep(sheep - 1);
-
 };
 
 console.log(countSheep(10));
+
+//=====  DOUBLE ARRAY  =====
+
+//let arr = [1,2,3];
+
+function arrDbl(arr) {
+  //let newArr;
+  if (arr.length === 0) {
+    return [];
+  } else {
+    //newArr = arr[0] * 2;
+    return [arr[0] * 2, ...arrDbl(arr.slice(1))];
+  }
+}
+
+console.log(arrDbl([1, 2, 3, 10, 20]));

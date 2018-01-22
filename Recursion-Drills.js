@@ -20,14 +20,13 @@ console.log(countSheep(10));
 
 //let arr = [1,2,3];
 
-function arrDbl(arr) {
-  //let newArr;
+const arrDbl = arr => {
   if (arr.length === 0) {
     return [];
   } else {
     //newArr = arr[0] * 2;
     return [arr[0] * 2, ...arrDbl(arr.slice(1))];
   }
-}
+};
 
 console.log(arrDbl([1, 2, 3, 10, 20]));

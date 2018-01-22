@@ -14,7 +14,7 @@ const countSheep = sheep => {
   return countSheep(sheep - 1);
 };
 
-console.log(countSheep(10));
+// console.log(countSheep(10));
 
 //=====  DOUBLE ARRAY  =====
 
@@ -29,4 +29,19 @@ const arrDbl = arr => {
   }
 };
 
-console.log(arrDbl([1, 2, 3, 10, 20]));
+// console.log(arrDbl([1, 2, 3, 10, 20]));
+
+
+//=====REVERSE STRING=====//
+
+const reverseStr = str => {
+  //input -- string
+  if (str  === '') {
+    return '';
+  }
+
+  return reverseStr(str.slice(1)) + str[0];
+ 
+};
+
+reverseStr('firoz');

@@ -69,4 +69,16 @@ const binaryConverter = n => {
   return binaryConverter(Math.floor(n / 2)) + x;
 };
 
-console.log(binaryConverter(8));
+console.log(binaryConverter(2));
+
+//==== FACTORIAL ====//
+
+const findFactorial = num => {
+  if (num === 1)
+    return 1;
+  else 
+    return num * findFactorial(num - 1);
+
+};
+
+console.log(findFactorial(6));

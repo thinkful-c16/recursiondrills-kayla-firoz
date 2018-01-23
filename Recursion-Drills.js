@@ -56,3 +56,17 @@ const triNum = n => {
 };
 
 console.log(triNum(6));
+
+//===== BINARY CONVERTER =====//
+const binaryConverter = n => {
+  if (n === 0) {
+    return '0';
+  }
+  if (n === 1) {
+    return '1';
+  }
+  let x = n % 2;
+  return binaryConverter(Math.floor(n / 2)) + x;
+};
+
+console.log(binaryConverter(8));
